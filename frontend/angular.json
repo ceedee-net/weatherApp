@@ -33,6 +33,7 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "../backend/src/main/resources/META-INF/resources",
               "budgets": [
                 {
                   "type": "initial",
