@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: var(--surface-a);
+    height: 100vh;
+    margin:0;
+    padding:0;
+    overflow: auto;
+    color: var(--primary-color);
+}
+  
+app-root {
+    display: block;
+    height: 100%;
+}
+  
+* {
+    font-family: 'Oxygen', 'Source Sans Pro', sans-serif;
+}
