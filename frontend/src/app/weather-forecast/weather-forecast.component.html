@@ -1,0 +1,22 @@
+<h1>Wettervorhersage</h1>
+
+<div *ngIf="weatherData">
+    <h2>vom {{ weatherData.current.dt * 1000 | date: 'dd.MM.yyy HH:mm' }}</h2>
+
+    <h3>Die Temperatur beträgt aktuell {{ weatherData.current.temp | number: '1.1-1': 'de'}} °C</h3>
+
+    <h3>Die nächsten Tage</h3>
+    <div *ngFor="let item of weatherData.daily">        
+        <p></p>
+        <b>Das Wetter am {{ item.dt * 1000 | date: 'dd.MM.yyyy' }}:</b>
+        <div>
+            {{ item.weather[0].description }} 
+            bei Temperaturen von 
+            {{ item.temp.min | number: '1.0-0': 'de'}} 
+            bis 
+            {{ item.temp.max | number: '1.0-0': 'de'}} °C
+        </div>
+    </div>    
+</div>
+
+
